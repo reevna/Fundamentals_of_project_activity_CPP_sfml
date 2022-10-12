@@ -10,9 +10,9 @@ int main()
 
     constexpr float BALL_SIZE = 40;
     sf::CircleShape shape(BALL_SIZE);
-    shape.setPosition({200, 120});
+    shape.setPosition({500, 120});
     shape.setFillColor(sf::Color(0xFF, 0xFF, 0xFF));
-    sf::Vector2f speed = {50.f, 15.f};
+    sf::Vector2f speed = {350.f, 15.f};
 
     while (window.isOpen())
     {
@@ -36,7 +36,7 @@ int main()
         {
             speed.x = -speed.x;
         }
-        if ((position.x < 0) && (speed.x < 0))
+        if ((position.x < 0) && (speed.x < 0)) //if ((position.x < 500) && (speed.x < 0)) - отражается от невидимой стенки
         {
             speed.x = -speed.x;
         }
